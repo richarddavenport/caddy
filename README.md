@@ -1,4 +1,4 @@
-# Custom Caddy with Rate Limiting
+# Caddy with Nonstandard Plugins
 
 [![Build and Publish Docker Image](https://github.com/richarddavenport/caddy/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/richarddavenport/caddy/actions/workflows/docker-publish.yml)
 
