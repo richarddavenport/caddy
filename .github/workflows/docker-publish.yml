@@ -26,6 +26,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      id-token: write  # required for OIDC token used by attest-build-provenance
 
     steps:
       - name: Checkout repository
@@ -56,6 +57,7 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push Docker image
+        id: build  # needed to reference digest in later steps
         uses: docker/build-push-action@v5
         with:
           context: .
